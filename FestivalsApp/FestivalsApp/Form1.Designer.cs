@@ -37,9 +37,10 @@
             this.locationsL = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.festivalsL = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.festivalsL = new System.Windows.Forms.Label();
             this.saveChangesB = new System.Windows.Forms.Button();
+            this.removeB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.locationsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.festivalsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -74,6 +75,7 @@
             // 
             // festivalsDGV
             // 
+            this.festivalsDGV.AllowUserToOrderColumns = true;
             this.festivalsDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -85,25 +87,25 @@
             this.festivalsDGV.RowHeadersWidth = 51;
             this.festivalsDGV.RowTemplate.Height = 24;
             this.festivalsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.festivalsDGV.Size = new System.Drawing.Size(553, 502);
+            this.festivalsDGV.Size = new System.Drawing.Size(553, 497);
             this.festivalsDGV.TabIndex = 1;
             this.festivalsDGV.SelectionChanged += new System.EventHandler(this.FestivalsDGV_SelectionChanged);
             // 
             // recordNameTB
             // 
             this.recordNameTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.recordNameTB.Location = new System.Drawing.Point(91, 2);
+            this.recordNameTB.Location = new System.Drawing.Point(91, 4);
             this.recordNameTB.Margin = new System.Windows.Forms.Padding(2);
             this.recordNameTB.Name = "recordNameTB";
             this.recordNameTB.ReadOnly = true;
-            this.recordNameTB.Size = new System.Drawing.Size(458, 27);
+            this.recordNameTB.Size = new System.Drawing.Size(379, 27);
             this.recordNameTB.TabIndex = 4;
             // 
             // recordNameL
             // 
             this.recordNameL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.recordNameL.AutoSize = true;
-            this.recordNameL.Location = new System.Drawing.Point(2, 5);
+            this.recordNameL.Location = new System.Drawing.Point(2, 8);
             this.recordNameL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.recordNameL.Name = "recordNameL";
             this.recordNameL.Size = new System.Drawing.Size(85, 20);
@@ -176,29 +178,19 @@
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.AutoSize = true;
             this.tableLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.recordNameL, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.recordNameTB, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 539);
+            this.tableLayoutPanel3.Controls.Add(this.removeB, 2, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 534);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(551, 31);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(551, 36);
             this.tableLayoutPanel3.TabIndex = 8;
-            // 
-            // festivalsL
-            // 
-            this.festivalsL.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.festivalsL.AutoSize = true;
-            this.festivalsL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.festivalsL.Location = new System.Drawing.Point(3, 0);
-            this.festivalsL.Name = "festivalsL";
-            this.festivalsL.Size = new System.Drawing.Size(93, 30);
-            this.festivalsL.TabIndex = 2;
-            this.festivalsL.Text = "Festivals";
             // 
             // tableLayoutPanel4
             // 
@@ -218,6 +210,17 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(557, 30);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
+            // festivalsL
+            // 
+            this.festivalsL.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.festivalsL.AutoSize = true;
+            this.festivalsL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.festivalsL.Location = new System.Drawing.Point(3, 0);
+            this.festivalsL.Name = "festivalsL";
+            this.festivalsL.Size = new System.Drawing.Size(93, 30);
+            this.festivalsL.TabIndex = 2;
+            this.festivalsL.Text = "Festivals";
+            // 
             // saveChangesB
             // 
             this.saveChangesB.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -230,6 +233,19 @@
             this.saveChangesB.Text = "Save Changes";
             this.saveChangesB.UseVisualStyleBackColor = true;
             this.saveChangesB.Click += new System.EventHandler(this.SaveChanges);
+            // 
+            // removeB
+            // 
+            this.removeB.AutoSize = true;
+            this.removeB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.removeB.Enabled = false;
+            this.removeB.Location = new System.Drawing.Point(475, 3);
+            this.removeB.Name = "removeB";
+            this.removeB.Size = new System.Drawing.Size(73, 30);
+            this.removeB.TabIndex = 6;
+            this.removeB.Text = "Remove";
+            this.removeB.UseVisualStyleBackColor = true;
+            this.removeB.Click += new System.EventHandler(this.RemoveB_Click);
             // 
             // Form1
             // 
@@ -275,6 +291,7 @@
         private System.Windows.Forms.Label festivalsL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button saveChangesB;
+        private System.Windows.Forms.Button removeB;
     }
 }
 
