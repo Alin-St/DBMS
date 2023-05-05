@@ -67,8 +67,8 @@ namespace FestivalsApp
             };
 
             // Set up data binding
-            locationsDGV.DataSource = _parentsBS;
-            locationsDGV.Columns[parentTableIdName].Visible = false;
+            parentsDGV.DataSource = _parentsBS;
+            parentsDGV.Columns[parentTableIdName].Visible = false;
             childrenDGV.DataSource = _childrenBS;
             childrenDGV.Columns[childTableIdName].Visible = false;
             childrenDGV.Columns[parentTableIdName].Visible = false;

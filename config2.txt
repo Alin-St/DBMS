@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+	<appSettings>
+		<add key="ConnectionString" value="Data Source=DESKTOP-REAU09T; Initial Catalog=dbms; Integrated Security=true"/>
+		<add key="ParentTableName" value="Attendees"/>
+		<add key="ChildTableName" value="Tickets"/>
+		<add key="ParentTableIdName" value="attendee_id"/>
+		<add key="ChildTableIdName" value="ticket_id"/>
+		<add key="ChildTableNameField" value="ticket_type"/>
+	</appSettings>
+</configuration>

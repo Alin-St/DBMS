@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.locationsDGV = new System.Windows.Forms.DataGridView();
+            this.parentsDGV = new System.Windows.Forms.DataGridView();
             this.childrenDGV = new System.Windows.Forms.DataGridView();
             this.recordNameTB = new System.Windows.Forms.TextBox();
             this.recordNameL = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.childrenL = new System.Windows.Forms.Label();
             this.saveChangesB = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.locationsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -53,32 +53,36 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // locationsDGV
+            // parentsDGV
             // 
-            this.locationsDGV.AllowUserToAddRows = false;
-            this.locationsDGV.AllowUserToDeleteRows = false;
-            this.locationsDGV.AllowUserToOrderColumns = true;
-            this.locationsDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.parentsDGV.AllowUserToAddRows = false;
+            this.parentsDGV.AllowUserToDeleteRows = false;
+            this.parentsDGV.AllowUserToOrderColumns = true;
+            this.parentsDGV.AllowUserToResizeRows = false;
+            this.parentsDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.locationsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.locationsDGV.Location = new System.Drawing.Point(2, 32);
-            this.locationsDGV.Margin = new System.Windows.Forms.Padding(2);
-            this.locationsDGV.MultiSelect = false;
-            this.locationsDGV.Name = "locationsDGV";
-            this.locationsDGV.ReadOnly = true;
-            this.locationsDGV.RowHeadersWidth = 51;
-            this.locationsDGV.RowTemplate.Height = 24;
-            this.locationsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.locationsDGV.Size = new System.Drawing.Size(489, 539);
-            this.locationsDGV.TabIndex = 0;
+            this.parentsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.parentsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.parentsDGV.Location = new System.Drawing.Point(2, 32);
+            this.parentsDGV.Margin = new System.Windows.Forms.Padding(2);
+            this.parentsDGV.MultiSelect = false;
+            this.parentsDGV.Name = "parentsDGV";
+            this.parentsDGV.ReadOnly = true;
+            this.parentsDGV.RowHeadersWidth = 51;
+            this.parentsDGV.RowTemplate.Height = 24;
+            this.parentsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.parentsDGV.Size = new System.Drawing.Size(489, 539);
+            this.parentsDGV.TabIndex = 0;
             // 
             // childrenDGV
             // 
             this.childrenDGV.AllowUserToOrderColumns = true;
+            this.childrenDGV.AllowUserToResizeRows = false;
             this.childrenDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.childrenDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.childrenDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.childrenDGV.Location = new System.Drawing.Point(2, 32);
             this.childrenDGV.Margin = new System.Windows.Forms.Padding(2);
@@ -134,7 +138,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.locationsDGV, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.parentsDGV, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.parentsL, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -145,13 +149,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 573);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // locationsL
+            // parentsL
             // 
             this.parentsL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.parentsL.AutoSize = true;
             this.parentsL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parentsL.Location = new System.Drawing.Point(3, 0);
-            this.parentsL.Name = "locationsL";
+            this.parentsL.Name = "parentsL";
             this.parentsL.Size = new System.Drawing.Size(83, 30);
             this.parentsL.TabIndex = 1;
             this.parentsL.Text = "Parents";
@@ -223,13 +227,13 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(557, 30);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
-            // festivalsL
+            // childrenL
             // 
             this.childrenL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.childrenL.AutoSize = true;
             this.childrenL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.childrenL.Location = new System.Drawing.Point(3, 0);
-            this.childrenL.Name = "festivalsL";
+            this.childrenL.Name = "childrenL";
             this.childrenL.Size = new System.Drawing.Size(92, 30);
             this.childrenL.TabIndex = 2;
             this.childrenL.Text = "Children";
@@ -259,7 +263,7 @@
             this.Text = "Festivals Management App";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveChanges);
             this.Shown += new System.EventHandler(this.Form1_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.locationsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenDGV)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -279,7 +283,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView locationsDGV;
+        private System.Windows.Forms.DataGridView parentsDGV;
         private System.Windows.Forms.DataGridView childrenDGV;
         private System.Windows.Forms.TextBox recordNameTB;
         private System.Windows.Forms.Label recordNameL;
