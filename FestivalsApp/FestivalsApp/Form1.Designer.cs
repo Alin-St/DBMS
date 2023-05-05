@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.locationsDGV = new System.Windows.Forms.DataGridView();
-            this.festivalsDGV = new System.Windows.Forms.DataGridView();
+            this.childrenDGV = new System.Windows.Forms.DataGridView();
             this.recordNameTB = new System.Windows.Forms.TextBox();
             this.recordNameL = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.locationsL = new System.Windows.Forms.Label();
+            this.parentsL = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.festivalsL = new System.Windows.Forms.Label();
-            this.saveChangesB = new System.Windows.Forms.Button();
             this.removeB = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.childrenL = new System.Windows.Forms.Label();
+            this.saveChangesB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.locationsDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.festivalsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.childrenDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -73,23 +73,23 @@
             this.locationsDGV.Size = new System.Drawing.Size(489, 539);
             this.locationsDGV.TabIndex = 0;
             // 
-            // festivalsDGV
+            // childrenDGV
             // 
-            this.festivalsDGV.AllowUserToOrderColumns = true;
-            this.festivalsDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.childrenDGV.AllowUserToOrderColumns = true;
+            this.childrenDGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.festivalsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.festivalsDGV.Location = new System.Drawing.Point(2, 32);
-            this.festivalsDGV.Margin = new System.Windows.Forms.Padding(2);
-            this.festivalsDGV.MultiSelect = false;
-            this.festivalsDGV.Name = "festivalsDGV";
-            this.festivalsDGV.RowHeadersWidth = 51;
-            this.festivalsDGV.RowTemplate.Height = 24;
-            this.festivalsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.festivalsDGV.Size = new System.Drawing.Size(553, 497);
-            this.festivalsDGV.TabIndex = 1;
-            this.festivalsDGV.SelectionChanged += new System.EventHandler(this.FestivalsDGV_SelectionChanged);
+            this.childrenDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.childrenDGV.Location = new System.Drawing.Point(2, 32);
+            this.childrenDGV.Margin = new System.Windows.Forms.Padding(2);
+            this.childrenDGV.MultiSelect = false;
+            this.childrenDGV.Name = "childrenDGV";
+            this.childrenDGV.RowHeadersWidth = 51;
+            this.childrenDGV.RowTemplate.Height = 24;
+            this.childrenDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.childrenDGV.Size = new System.Drawing.Size(553, 497);
+            this.childrenDGV.TabIndex = 1;
+            this.childrenDGV.SelectionChanged += new System.EventHandler(this.FestivalsDGV_SelectionChanged);
             // 
             // recordNameTB
             // 
@@ -135,7 +135,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.locationsDGV, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.locationsL, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.parentsL, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -147,14 +147,14 @@
             // 
             // locationsL
             // 
-            this.locationsL.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.locationsL.AutoSize = true;
-            this.locationsL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationsL.Location = new System.Drawing.Point(3, 0);
-            this.locationsL.Name = "locationsL";
-            this.locationsL.Size = new System.Drawing.Size(104, 30);
-            this.locationsL.TabIndex = 1;
-            this.locationsL.Text = "Locations";
+            this.parentsL.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.parentsL.AutoSize = true;
+            this.parentsL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parentsL.Location = new System.Drawing.Point(3, 0);
+            this.parentsL.Name = "locationsL";
+            this.parentsL.Size = new System.Drawing.Size(83, 30);
+            this.parentsL.TabIndex = 1;
+            this.parentsL.Text = "Parents";
             // 
             // tableLayoutPanel2
             // 
@@ -162,7 +162,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.festivalsDGV, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.childrenDGV, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -192,6 +192,19 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(551, 36);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
+            // removeB
+            // 
+            this.removeB.AutoSize = true;
+            this.removeB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.removeB.Enabled = false;
+            this.removeB.Location = new System.Drawing.Point(475, 3);
+            this.removeB.Name = "removeB";
+            this.removeB.Size = new System.Drawing.Size(73, 30);
+            this.removeB.TabIndex = 6;
+            this.removeB.Text = "Remove";
+            this.removeB.UseVisualStyleBackColor = true;
+            this.removeB.Click += new System.EventHandler(this.RemoveB_Click);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -200,7 +213,7 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.festivalsL, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.childrenL, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.saveChangesB, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -212,14 +225,14 @@
             // 
             // festivalsL
             // 
-            this.festivalsL.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.festivalsL.AutoSize = true;
-            this.festivalsL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.festivalsL.Location = new System.Drawing.Point(3, 0);
-            this.festivalsL.Name = "festivalsL";
-            this.festivalsL.Size = new System.Drawing.Size(93, 30);
-            this.festivalsL.TabIndex = 2;
-            this.festivalsL.Text = "Festivals";
+            this.childrenL.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.childrenL.AutoSize = true;
+            this.childrenL.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.childrenL.Location = new System.Drawing.Point(3, 0);
+            this.childrenL.Name = "festivalsL";
+            this.childrenL.Size = new System.Drawing.Size(92, 30);
+            this.childrenL.TabIndex = 2;
+            this.childrenL.Text = "Children";
             // 
             // saveChangesB
             // 
@@ -234,19 +247,6 @@
             this.saveChangesB.UseVisualStyleBackColor = true;
             this.saveChangesB.Click += new System.EventHandler(this.SaveChanges);
             // 
-            // removeB
-            // 
-            this.removeB.AutoSize = true;
-            this.removeB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.removeB.Enabled = false;
-            this.removeB.Location = new System.Drawing.Point(475, 3);
-            this.removeB.Name = "removeB";
-            this.removeB.Size = new System.Drawing.Size(73, 30);
-            this.removeB.TabIndex = 6;
-            this.removeB.Text = "Remove";
-            this.removeB.UseVisualStyleBackColor = true;
-            this.removeB.Click += new System.EventHandler(this.RemoveB_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,7 +260,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveChanges);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.locationsDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.festivalsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.childrenDGV)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -280,15 +280,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView locationsDGV;
-        private System.Windows.Forms.DataGridView festivalsDGV;
+        private System.Windows.Forms.DataGridView childrenDGV;
         private System.Windows.Forms.TextBox recordNameTB;
         private System.Windows.Forms.Label recordNameL;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label locationsL;
+        private System.Windows.Forms.Label parentsL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label festivalsL;
+        private System.Windows.Forms.Label childrenL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button saveChangesB;
         private System.Windows.Forms.Button removeB;
