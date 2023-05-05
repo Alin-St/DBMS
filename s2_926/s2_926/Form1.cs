@@ -15,7 +15,7 @@ namespace s2_926
         BindingSource _locationsBS;
         BindingSource _festivalsBS;
 
-        [SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "<Pending>")]
+        [SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "False positive warning")]
         SqlCommandBuilder _commandBuilder;
 
         public Form1()
@@ -30,9 +30,6 @@ namespace s2_926
             _locationsDA = new SqlDataAdapter("Select * from Locations", _connection);
             _festivalsDA = new SqlDataAdapter("Select * from Festivals", _connection);
             _commandBuilder = new SqlCommandBuilder(_festivalsDA);
-
-            /*daSongs.InsertCommand = new SqlCommand(".... where idS = @idS", conn);
-            daSongs.InsertCommand.Parameters.Add("@idS", SqlDbType.Int).Value = 24;*/
 
             _locationsDA.Fill(_dataSet, "Locations");
             _festivalsDA.Fill(_dataSet, "Festivals");
@@ -53,26 +50,28 @@ namespace s2_926
                 DataMember = "FK_Locations_Festivals"
             };
 
-            dataGridViewAlbums.DataSource = _locationsBS;
-            dataGridViewAlbums.Columns["location_id"].Visible = false;
-            dataGridViewSongs.DataSource = _festivalsBS;
-            dataGridViewSongs.Columns["festival_id"].Visible = false;
-            dataGridViewSongs.Columns["location_id"].Visible = false;
+            locationsDGV.DataSource = _locationsBS;
+            locationsDGV.Columns["location_id"].Visible = false;
+            festivalsDGV.DataSource = _festivalsBS;
+            festivalsDGV.Columns["festival_id"].Visible = false;
+            festivalsDGV.Columns["location_id"].Visible = false;
 
-            textBox1.DataBindings.Add("Text", _festivalsBS, "festival_name");
+            recordNameTB.DataBindings.Add("Text", _festivalsBS, "festival_name");
         }
 
-        private void dataGridViewSongs_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void FestivalsDGV_SelectionChanged(object sender, EventArgs e)
         {
-            dataGridViewSongs.ClearSelection();
-            dataGridViewSongs.Rows[_festivalsBS.Position].Selected = true;
-            label1.Text = "No. record: " + (_festivalsBS.Position + 1).ToString() + "/" +
-                _festivalsBS.Count.ToString();
+            recordNameL.Text = "Record " + (_festivalsBS.Position + 1).ToString() + "/" +
+                _festivalsBS.Count.ToString() + ":";
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void SaveChanges(object sender, EventArgs e)
         {
-            _festivalsDA.Update(_dataSet, "Festivals");
+            try
+            {
+                _festivalsDA.Update(_dataSet, "Festivals");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "Error:"); }
         }
     }
 }
