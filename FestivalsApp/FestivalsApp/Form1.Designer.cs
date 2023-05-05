@@ -1,4 +1,4 @@
-﻿namespace s2_926
+﻿namespace FestivalsApp
 {
     partial class Form1
     {

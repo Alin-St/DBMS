@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 using System.Windows.Forms;
 
-namespace s2_926
+namespace FestivalsApp
 {
     public partial class Form1 : Form
     {

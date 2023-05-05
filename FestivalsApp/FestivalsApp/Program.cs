@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace s2_926
+namespace FestivalsApp
 {
     internal static class Program
     {
